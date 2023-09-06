@@ -49,7 +49,6 @@ but.addEventListener("click", function () {
         //Срез, очистка пробелов и разбитие по тире "-"
         let strT = startValues.substring(startT + 2, endT).replaceAll('\t', '').replaceAll(' ', '').split('-');
         let strV = startValues.substring(startV + 2, endV).replaceAll('\t', '').replaceAll(' ', '');
-        console.log(strV);
         //Вывод значений
         t1.value = strT[0];
         t2.value = strT[1];
@@ -93,19 +92,19 @@ but.addEventListener("click", function () {
 
         check2.checked = (endCheck >= 0 && endCheck + 4 != startCheckboxes.indexOf("solution")) ? true : false;
 
-        let max = Math.max(startCheck, endCheck) + indexStartCheckboxes;
-        if (str[max + 2] == "s") {
-            max = max + 3;
+        //let max = Math.max(startCheck, endCheck) + indexStartCheckboxes;
+        //if (str[max + 2] == "s") {
+        //    max = max + 3;
 
-        } else if (str[max + 7] == "e") {
-            max = max + 8;
-        } else {
-            alert("Error!");
-        }
-        let newStr = str.slice(max, indexStartSelect);
+        //} else if (str[max + 7] == "e") {
+        //    max = max + 8;
+        //}
+        let newStr = str.slice(indexStartCheckboxes, indexStartSelect);
         newStr = newStr.replaceAll("\t", "");
         newStr = newStr.split("\n");
         newStr = newStr.filter(n => n);
+        newStr.shift();
+        newStr.shift();
 
         let removeNewStr = [];
         newStr.forEach(el => {
@@ -137,6 +136,8 @@ but.addEventListener("click", function () {
             newStr = newStr + '\n' + value;
             textarea.value = newStr;
 
+            substance.value = "";
+            count.value = "";
         })
 
     }
@@ -148,13 +149,15 @@ but.addEventListener("click", function () {
 
 })
 saveBut.addEventListener("click", function () {
-    let fasa, processValue;
+    let fasa = "", processValue;
     if (check1.checked == true && check2.checked == true) {
-        fasa = "condense, gas";
+        fasa += "\n\tcondense, gas";
     } else if (check1.checked == true) {
-        fasa = "condense";
+        fasa += "\n\tcondense";
     } else if (check2.checked == true) {
-        fasa = "gas";
+        fasa += "\n\tgas";
+    } else {
+        fasa = "";
     }
 
     if (process.value == "phase") {
@@ -168,7 +171,7 @@ saveBut.addEventListener("click", function () {
     substances = substances.split("\n");
     substances = substances.join("\n\t");
 
-    let newData = "conditions:\n\tt " + t1.value + " - " + t2.value + " K\n\tv " + v.value + " m\nsystem:\n\t" + fasa + "\n\n\t" + substances + "\nprocess:\n\t" + processValue;
+    let newData = "conditions:\n\tt " + t1.value + " - " + t2.value + " K\n\tv " + v.value + " m\nsystem:" + fasa + "\n\t" + substances + "\nprocess:\n\t" + processValue;
     inputText.value = newData;
 
     document.querySelector(".wrapper").classList.remove("active");
@@ -178,4 +181,6 @@ saveBut.addEventListener("click", function () {
 closeBut.addEventListener("click", function () {
     document.querySelector(".wrapper").classList.remove("active");
     document.querySelector(".popup").classList.remove("active");
+    substance.value = "";
+    count.value = "";
 })
