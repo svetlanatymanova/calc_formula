@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/stylesheet.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+
+    <title>Project</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Header Start-->
+        <header>
+            <div class="container">
+                <div class="header_part">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="images/logo.png">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Домой</a></li>
+                            <li><a href="#">Технологии</a></li>
+                            <li><a href="#">Публикации</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Войти</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header_bottom reactors">
+                    <ul>
+                        <li>
+                            <a href="#">Рабочий&nbsp;стол</a>
+                        </li>
+                        <li>
+                            <a href="#">Профиль</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hamburger-menu">
+                    <input id="menu_toggle" type="checkbox" />
+                    <label class="menu_btn" for="menu_toggle">
+                        <span></span>
+                    </label>
+
+                    <ul class="menu_box">
+                        <li><a class="menu_item" href="#">Домой</a></li>
+                        <li><a class="menu_item" href="#">Технологии</a></li>
+                        <li><a class="menu_item" href="#">Публикации</a></li>
+                        <li><a class="menu_item" href="#">О нас</a></li>
+                        <li><a class="menu_item" href="#">Контакты</a></li>
+                        <li><a class="menu_item" href="#">Войти</a></li>
+                        <li><a class="menu_item" href="#">Рабочий стол</a></li>
+                        <li><a class="menu_item" href="#">Профиль</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--Header End-->
+
+        <!--Section Edit Block Start-->
+
+        <section>
+            <div class="container">
+                <div class="edits">
+                    <div class="title">
+                        <h1>Задача для расчета</h1>
+                        <h2>Результаты</h2>
+                    </div>
+                    <form action="" method="POST" name="f">
+                        <div class="left_part">
+                            <div class="name">
+                                <p>Название расчета</p>
+                                <input type="text" name="name">
+                            </div>
+                            <div class="description">
+                                <p>Описание расчета</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="description">
+                                <p>Задание на расчет</p>
+                                <textarea id="lang"></textarea><br>
+                                <button id="submit">Скопировать пример</button> <button type="button"
+                                    id="master">Визуальный
+                                    редактор</button><br>
+                            </div>
+                            <div class="info">
+                                <p>Опишите задачу на языке химических расчетов</p>
+                            </div>
+                            <div class="sending">
+                                <button>Сохранить</button>
+                                <button>Отправить на расчет</button>
+                            </div>
+                        </div>
+                        <div class="right_part">
+                            <p><a href="#">Результаты расчета</a></p>
+                            <br><br><br>
+                            <p><a href="#">Удалить расчет</a></p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!--Section Edit Block End-->
+        <!--Footer Start-->
+        <footer>
+            <div class="container">
+                <div class="name">
+                    <p>SlobodovReactor &copy; 2022</p>
+                </div>
+            </div>
+        </footer>
+        <!--Footer End-->
+
+
+        <div class="popup">
+            <div class="popup__content">
+                <div class="str str-full">
+                    <div class="str__content">
+                        <div class="popup__title">
+                            Температуры:
+                        </div>
+                        <input class="str__input" type="number" min="0" name="" id="t1">
+                        <div class="popup__title">
+                            -
+                        </div>
+                        <input class="str__input" type="number" min="0" name="" id="t2">
+                        <div class="popup__title">
+                            К
+                        </div>
+                    </div>
+                    <div class="str__content">
+                        <div class="popup__title">
+                            Объем:
+                        </div>
+                        <input class="str__input" min="0" step="0.1" type="number" name="" id="v">
+                        <div class="popup__title">
+                            m3
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__str str str-full">
+                    <div class="str__content str__content-vertical">
+                        <div class="popup__title">
+                            Фазы:
+                        </div>
+                        <div class="popup__checks">
+                            <div class="popup__check">
+                                <input type="checkbox" id="cond" />
+                                <label for="cond">Конденсированные</label>
+                            </div>
+                            <div class="popup__check">
+                                <input type="checkbox" id="gas" />
+                                <label for="gas">Газы</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="str__content str__content-vertical str__content-right">
+                        <div class="popup__title">
+                            Процесс:
+                        </div>
+                        <select id="process" name="#" class="popup__select">
+                            <option id="none" disabled selected>Не выбрано</option>
+                            <option id="phase" value="phase">Фазовый расчет</option>
+                            <option id="gas_solution" value="gas_solution">Газовый раствор</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="popup__datas">
+                    <div class="popup__str str">
+                        <div class="popup__title">
+                            Вещества:
+                        </div>
+                    </div>
+
+                    <div class="str">
+                        <div class="str__content str__content-vertical">
+                            <div class="popup__title">
+                                Формула
+                            </div>
+                            <input class="str__input" type="text" name="" id="substance">
+                        </div>
+                        <div class="str__content str__content-vertical">
+                            <div class="popup__title">
+                                Количество
+                            </div>
+                            <input class="str__input" type="number" min="0" name="" id="count">
+                        </div>
+                        <div class="str__content str__content-vertical str__content-end">
+                            <div class="popup__title">
+                            </div>
+                            <select id="select" name="#" class="popup__select">
+                                <option id="gr" value="gram">грамм</option>
+                                <option id="mol" value="mol">моль</option>
+                                <option id="percent" value="%">%</option>
+                            </select>
+                        </div>
+                        <div class="str__content str__content-vertical str__content-end">
+                            <div class="popup__title">
+                            </div>
+                            <button type="button" id="add" class="str__btn">Добавить</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="popup__str str">
+                    <textarea name="" id="textarea" class="str__textarea"></textarea>
+
+                </div>
+                <div class="popup__str str str-right">
+                    <div class="str__content">
+                        <div class="str__buts">
+                            <button type="button" id="close" class="str__btn">
+                                Отмена
+                            </button>
+                            <button type="button" id="save" class="str__btn">
+                                Сохранить
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector('#submit').addEventListener('click', (event) => {
+        document.querySelector('#lang').value = `conditions:
+	t 273 - 2000 K
+	v 0.1	 m
+system:
+	condense, 		gas
+	
+	Fe2O3	 10 mol
+	Na2O    1 mol
+H2O 50 gram
+	O2 20   %
+	N2 80 %
+process:
+	gas solution`;
+        event.preventDefault();
+        return false;
+    });
+</script>
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,55 @@
+.popup__content {
+  padding: 20px;
+}
+.popup__str {
+  margin-top: 20px;
+}
+.str {
+  display: flex;
+  gap: 20px;
+}
+.str-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.str-full {
+  gap: 50px;
+  justify-content: space-between;
+}
+.str__content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.str__input {
+  max-width: 100px;
+  font-size: 18px;
+  line-height: 1;
+}
+.str__content-vertical {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  gap: 0px;
+  align-items: flex-start;
+}
+.str__content-end {
+  justify-content: flex-end;
+}
+.str__content-right {
+  padding-right: 40px;
+}
+.str__btn {
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.693);
+}
+.str__textarea {
+  height: 300px;
+  width: 100%;
+  padding: 6px 10px;
+}
+.str__buts {
+  display: flex;
+  gap: 50px;
+}

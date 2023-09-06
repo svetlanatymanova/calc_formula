@@ -1,0 +1,81 @@
+.popup {
+    &__content {
+        padding: 20px;
+    }
+
+    &__str {
+        margin-top: 20px;
+    }
+
+    &__title {
+    }
+
+    &__checks {
+    }
+
+    &__check {
+    }
+
+    &__select {
+    }
+    &__datas {
+    }
+}
+.str {
+    display: flex;
+    gap: 20px;
+    &-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-full {
+        gap: 50px;
+        justify-content: space-between;
+    }
+    &__content {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__input {
+        max-width: 100px;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    &__content-vertical {
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        gap: 0px;
+        align-items: flex-start;
+    }
+
+    &__content-end {
+        justify-content: flex-end;
+    }
+    &__content-right {
+        padding-right: 40px;
+    }
+
+    &__btn {
+        padding: 0 10px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.693);
+    }
+
+    &__textarea {
+        height: 300px;
+        width: 100%;
+        padding: 6px 10px;
+    }
+
+    &__content-right {
+    }
+
+    &__buts {
+        display: flex;
+        gap: 50px;
+    }
+}

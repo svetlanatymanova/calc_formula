@@ -1,0 +1,192 @@
+@media(max-width: 1200px) {
+    .header_part .menu {
+        flex: 0 0 60%;
+    }
+    header .header_bottom ul {
+        flex: 0 0 27%;
+    }
+    header .header_bottom.reactors ul {
+        flex: 0 0 20%;
+    }
+    .edits form {
+        display: block;
+    }
+    .edits .title h2 {
+        display: none;
+    }
+    .edits .right_part h2 {
+        display: block;
+    }
+}
+@media(max-width: 991px) {
+
+    .container {
+        max-width: 990px;
+    }
+    .menu,
+    header .header_bottom {
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    #menu_toggle {
+        opacity: 0;
+    }
+    #menu_toggle:checked + .menu_btn > span {
+        transform: rotate(45deg);
+    }
+    #menu_toggle:checked + .menu_btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+        background-color: #000;
+    }
+    #menu_toggle:checked + .menu_btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+        background-color: #000;
+    }
+    #menu_toggle:checked ~ .menu_box {
+        right: 0 !important;
+    }
+    .menu_btn {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        transition-duration: .25s;
+    }
+    .menu_btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu_btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    .menu_box {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 230px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+        z-index: 1;
+    }
+    .menu_item {
+        display: block;
+        padding: 12px 24px;
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+    .menu_item:hover {
+        background-color: #000;
+    }
+    .mb_menu.active{
+        top: -100%;
+        height: 166px;
+    }
+    form label {
+        font-size: 15px;
+    }
+    .edits form textarea {
+        width: 100%;
+    }
+}
+@media (max-width:767px){
+    textarea {
+        width: 100%;
+    }
+    .forma form input {
+        width: 35%;
+    }
+    form input.nostyle{
+        width: auto;
+    }
+    .reactor table .indent {
+        padding-right: 360px;
+    }
+    .reactor table td {
+        font-size: 14px;
+    }
+    .reactor table tbody::before {
+        height: 140px;
+    }
+    .calculation table tr {
+        font-size: 17px;
+    }
+    .calculation table .indent {
+        padding-right: 100px;
+    }
+    .calculation table tbody::before {
+        height: 145px;
+        right: 175px;
+    }
+}
+@media(max-width: 576px) {
+    .forma form input {
+        width: 50%;
+    }
+    form input.nostyle{
+        width: auto;
+    }
+    .reactor table td {
+        font-size: 13px;
+    }
+    .reactor table tbody::before{
+        right: 110px;
+    }
+    .reactor table .indent {
+        padding-right: 270px;
+    }
+    .calculation table .indent {
+        padding-right: 66px;
+    }
+    .calculation table tr {
+        font-size: 15px;
+    }
+    .calculation table tbody::before {
+        height: 128px;
+        right: 155px;
+    }
+}
+@media(max-width: 480px) {
+    .forma form input {
+        width: 55%;
+    }
+    form input.nostyle{
+        width: auto;
+    }
+    .calculation table tr {
+        font-size: 15px;
+    }
+    .calculation table .indent {
+        padding-right: 40px;
+    }
+    .calculation table tbody::before {
+        right: 157px;
+        height: 140px;
+    }
+}

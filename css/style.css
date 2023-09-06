@@ -1,0 +1,399 @@
+ul {
+    margin-bottom: 0;
+}
+
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+.hamburger-menu {
+    display: none;
+}
+.edits .right_part h2 {
+    display: none;
+}
+/*Index Block Start*/
+header {
+    margin-bottom: 50px;
+}
+.header_part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #C0C0C0;
+}
+.header_part .menu {
+	flex: 0 0 50%;
+}
+.header_part .menu ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: -30px;
+}
+.header_part .menu a {
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	font-family: 'Liberation Sans';
+	font-weight: bold;
+	padding: 0px 0px 0px 15px;
+	text-align: right;
+}
+.header_part .menu a:hover {
+    text-decoration: underline;
+}
+.forma {
+    text-align: center;
+    margin-bottom: 150px;
+}
+form .name {
+    margin-bottom: 15px;
+}
+form .name h1 {
+    font-size: 34px;
+    font-family: 'Liberation Sans';
+    color: #000;
+}
+form .name a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Liberation Sans';
+    color:#3366FF ;
+}
+form .name a:hover {
+    text-decoration: underline;
+}
+.forma form input {
+    width: 20%;
+    outline: none;
+    border-radius: 4px;
+    border: 2px solid #A19685;
+    font-size: 12px;
+    color: #000;
+    font-family: 'Liberation Serif';
+}
+form input.nostyle {
+    width: auto;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #000;
+ }
+ :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000;
+ }
+ ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000;
+ }
+ :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #000;
+ }
+
+form label {
+    font-size: 12px;
+    color: #000;
+    font-family: 'Liberation Serif';
+}
+form button {
+    padding: 0px 30px;
+    border-radius: 5px;
+    border: 2px solid #A19685;
+    font-family: 'Liberation Serif';
+    margin-top: 15px;
+}
+form .forgot {
+    margin-top: 30px;
+}
+form .forgot a{
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Liberation Sans';
+    color: #3366FF;
+}
+form .forgot a:hover {
+    text-decoration: underline;
+}
+footer .name {
+    border-top: 2px solid #C0C0C0;
+    text-align: center;
+}
+footer .name p {
+    font-size: 13px;
+    color: #000;
+    font-family: 'Liberation Sans';
+}
+/*Index Block End*/
+/*Calculation Block Start*/
+
+header .header_bottom {
+    display: flex;
+    justify-content: end;
+}
+header .header_bottom ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 20%;
+}
+header .header_bottom ul a {
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	font-family: 'Liberation Sans';
+	font-weight: bold;
+	padding: 0px 0px 0px 15px;
+}
+header .header_bottom ul a:hover {
+    text-decoration: underline;
+}
+.calculation table {
+    position: relative;
+}
+.calculation table tbody::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 155px;
+    position: absolute;
+    top: 0;
+    right: 185px;
+    background-color: #C0C0C0;
+}
+.calculation {
+    margin-bottom: 150px;
+}
+.calculation table tr:last-child {
+    border-bottom: 0;
+}
+.calculation table tr {
+    border-bottom: 2px solid #C0C0C0;
+    font-family: 'Liberation Sans';
+    font-size: 18px;
+}
+.calculation table .indent {
+    padding-right: 450px;
+}
+.calculation td:last-child{
+    padding-left: 10px;
+}
+.calculation table .text_right {
+    text-align: right;
+    padding-right: 15px;
+}
+.calculation table a {
+    color: #000;
+    text-decoration: none;
+}
+.calculation table a:hover {
+    text-decoration: underline;
+}
+
+/*Calculation Block End*/
+/*Answer Block Start*/
+.answer {
+    margin-bottom: 100px;
+}
+.answer h1 {
+    font-size: 40px;
+    color: #000;
+    font-family: 'Liberation Sans';
+}
+.answer p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-family: 'Liberation Sans';
+}
+textarea {
+    width: 750px;
+    height: 100px;
+    resize: none;
+    outline: none;
+    border-radius: 4px;
+}
+.answer .status {
+    margin-bottom: 15px;
+}
+.answer .amount input {
+    border-radius: 4px;
+    border: 1px solid #A19685;
+    outline: none;
+}
+.answer .amount .link {
+    margin-bottom: 10px;
+}
+.answer .report {
+    margin-bottom: 10px;
+}
+.answer .report input {
+    border-radius: 4px;
+    border: 1px solid #A19685;
+    outline: none;
+}
+.answer button {
+    border: 1px solid #003C74;
+    padding: 2px 40px;
+    margin-bottom: 50px;
+}
+/*Answer Block End*/
+/*Reactor Block Start*/
+
+header .header_bottom.reactors ul {
+    flex: 0 0 15%;
+}
+.reactor .title h1 {
+    font-size: 40px;
+    font-family: 'Liberation Sans';
+    margin-bottom: 40px;
+}
+.reactor .icon {
+    margin-bottom: 10px;
+}
+.reactor {
+    margin-bottom: 200px;
+}
+.reactor table{
+    position: relative;
+}
+.reactor table tr:last-child {
+    border-bottom: 0;
+}
+.reactor table tr {
+    border-bottom: 2px solid #C0C0C0;
+}
+.reactor table td {
+    padding-bottom: 5px;
+}
+.reactor table tbody::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 165px;
+    position: absolute;
+    top: 0;
+    right: 330px;
+    background-color: #C0C0C0;
+}
+.reactor table .text_right {
+    text-align: center;
+    padding-right: 20px;
+}
+.reactor table .indent {
+    padding-right: 510px;
+}
+.reactor table td {
+    font-size: 18px;
+    font-family: 'Liberation Sans';
+}
+.reactor table a {
+    color: #000;
+    text-decoration: none;
+}
+.reactor table a:hover {
+    text-decoration: underline;
+}
+.reactor table .green {
+    color: #009900;
+}
+.reactor table .yellow {
+    color: #FFCC66;
+}
+.reactor table .red {
+    color: #FF0000;
+}
+.reactor table .grey {
+    color: #999999;
+}
+/*Reactor Block End*/
+/*Edits Block Start*/
+
+.edits {
+    margin-bottom: 100px;
+}
+.edits .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.edits p {
+    margin-bottom: 0;
+}
+.edits .title h1 {
+    font-size: 40px;
+    font-family: 'Liberation Sans';
+}
+.edits .title h2 {
+    font-size: 30px;
+    font-family: 'Liberation Sans';
+}
+.edits form {
+    display: flex;
+    justify-content: space-between;
+}
+.edits form input {
+    border-radius: 4px;
+    border: 1px solid #A19685;
+    outline: none;
+}
+.edits form .name,
+.edits form .description {
+    font-size: 18px;
+    font-family: 'Liberation Sans';
+}
+.edits form textarea {
+    width: 800px;
+    height: 200px;
+    resize: none;
+    outline: none;
+    border-radius: 4px;
+}
+.edits form .info {
+    font-size: 12px;
+    font-family: 'Tahoma';
+}
+.edits form button {
+    border-color: #003C74;
+    font-family: 'Tahoma';
+    font-size: 16px;
+    padding: 5px 25px;
+    margin-right: 50px;
+}
+.edits form .right_part p {
+    font-size: 18px;
+    font-family: 'Liberation Sans';
+    padding-left: 40px;
+}
+/*Edits Block End*/
+/* popup */
+.popup{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transition: all 0.3s ease 0s;
+}
+.popup.active{
+    opacity: 1;
+    visibility: visible;
+}
+body{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.popup__content{
+    background: #ffffff;
+    border: 1px solid #000;
+    padding: 20px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
