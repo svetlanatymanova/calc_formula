@@ -165,13 +165,15 @@ saveBut.addEventListener("click", function () {
     } else if (process.value == "gas_solution") {
         processValue = "gas solution";
     } else {
-        processValue = "none";
+        processValue = "";
     }
     let substances = String(textarea.value);
     substances = substances.split("\n");
     substances = substances.join("\n\t");
+    let isT = t1.value == "" ? "" : "t ";
+    console.log(isT);
 
-    let newData = "conditions:\n\tt " + t1.value + " - " + t2.value + " K\n\tv " + v.value + " m\nsystem:" + fasa + "\n\t" + substances + "\nprocess:\n\t" + processValue;
+    let newData = "conditions:\n\t" + isT + t1.value + " - " + t2.value + " K\n\tv " + v.value + " m\nsystem:" + fasa + "\n\t" + substances + "\nprocess:\n\t" + processValue;
     inputText.value = newData;
 
     document.querySelector(".wrapper").classList.remove("active");
